@@ -1,0 +1,42 @@
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set( $symbol_escape = '\' )
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Vista Prototipo</title>
+<style>
+	body {
+		font-family: Arial, sans-serif;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 100vh;
+		margin: 0;
+		background-color: ${symbol_pound}f4f4f9;
+	}
+	.card {
+		background: white;
+		padding: 2rem;
+		border-radius: 8px;
+		box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+		text-align: center;
+	}
+	h1 {
+		color: ${symbol_pound}2c3e50;
+		margin-bottom: 0.5rem;
+	}
+	p {
+		color: ${symbol_pound}7f8c8d;
+	}
+</style>
+</head>
+<body>
+	<div class="card">
+		<h1>Prototipo</h1>
+		<p>Sistema Web Base con soporte PostgreSQL / MySQL (JDK 25)</p>
+		<p>Alumnos registrados en la tabla <strong>;alumnos</strong>: <span th:text="${symbol_dollar}{totalAlumnos}">0</span></p>
+	</div>
+</body>
+</html>
